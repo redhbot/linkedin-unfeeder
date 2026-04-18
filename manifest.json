@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "LinkedIn Unfeeder",
+  "version": "1.1",
+  "description": "Removes the LinkedIn feed so you can focus on what matters.",
+  "permissions": ["activeTab", "storage", "*://*.linkedin.com/*"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "icon.svg",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "48": "icon.svg"
+  }
+}

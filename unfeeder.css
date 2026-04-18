@@ -1,0 +1,49 @@
+/* Hide the main feed */
+main > div.relative > .scaffold-finite-scroll,
+div[componentkey^='container-update-list_mainFeed'],
+.scaffold-finite-scroll,
+.feed-shared-update-v2,
+.occludable-update,
+div[data-finite-scroll-hotkey-item] {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Hide "Start a post" box */
+.share-box-feed-entry__closed-share-box,
+.share-box-feed-entry__top-bar,
+.share-creation-state {
+  display: none !important;
+}
+
+/* Hide feed sort toggle */
+.feed-sort-toggle {
+  display: none !important;
+}
+
+/* Hide news sidebar */
+#feed-news-module,
+div:has(> div > div[data-view-name="news-module"]),
+.feed-follows-module,
+.news-module,
+.feed-shared-news-module {
+  display: none !important;
+}
+
+/* Hide "new posts" pill */
+.feed-new-update-pill__new-update-button {
+  display: none !important;
+}
+
+/* Show a calm message instead */
+.scaffold-layout__main::before {
+  content: "Feed hidden by LinkedIn Unfeeder. Focus on what matters.";
+  display: block;
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
